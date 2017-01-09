@@ -18,7 +18,5 @@ describe 'user sees top links' do
     expect(page).to_not have_content('TEST TITLE 4')
     expect(page).to_not have_content('TEST TITLE 3')
     expect(page).to_not have_content('TEST TITLE 2')
-    expect(page).to_not have_content('TEST TITLE 1')
-    expect(page).to_not have_content('TEST TITLE 0')
   end
 end
