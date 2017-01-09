@@ -1,0 +1,20 @@
+<div class="page-header">
+  <h1>Welcome to Hot Reader <small>The Hottest Reader on the Net</small></h1>
+</div>
+
+<table class="table table-hover">
+  <tr>
+    <th>Rank</th>
+    <th>Title</th>
+    <th>URL</th>
+    <th>Amount of Reads</th>
+  </tr>
+  <% @reads.each_with_index do |read, n| %>
+    <tr>
+      <td><%= (n + 1) %></td>
+      <td><%= read.title %></td>
+      <td><%= read.url %></td>
+      <td><%= read.counter %></td>
+    </tr>
+  <% end %>
+</table>
