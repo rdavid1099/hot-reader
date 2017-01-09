@@ -1,6 +1,6 @@
 class Api::V1::ReaderController
   def create
-    read = Read.new
+    read = Reader.new
     if read.record_read(read_params)
 
     else

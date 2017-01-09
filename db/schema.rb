@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20170109201746) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "reads", force: :cascade do |t|
+  create_table "readers", force: :cascade do |t|
     t.string  "title"
     t.string  "url"
     t.integer "counter", default: 1
