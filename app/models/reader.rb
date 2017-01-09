@@ -11,4 +11,8 @@ class Reader < ApplicationRecord
     end
     false
   end
+
+  def new_entry?
+    counter == 1
+  end
 end
