@@ -16,9 +16,11 @@ ActiveRecord::Schema.define(version: 20170109201746) do
   enable_extension "plpgsql"
 
   create_table "readers", force: :cascade do |t|
-    t.string  "title"
-    t.string  "url"
-    t.integer "counter", default: 1
+    t.string   "title"
+    t.string   "url"
+    t.integer  "counter",    default: 1
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
 end

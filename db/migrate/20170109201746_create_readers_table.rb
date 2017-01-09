@@ -4,6 +4,7 @@ class CreateReadersTable < ActiveRecord::Migration[5.0]
       t.string :title
       t.string :url
       t.integer :counter, default: 1
+      t.timestamps null: false
     end
   end
 end

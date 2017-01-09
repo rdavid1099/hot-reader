@@ -15,4 +15,8 @@ class Reader < ApplicationRecord
   def new_entry?
     counter == 1
   end
+
+  def self.top_ten_reads
+    self.where('updated_at > ?', 24.hours.ago).order(counter: :desc).limit(10)
+  end
 end
