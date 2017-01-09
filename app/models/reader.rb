@@ -4,9 +4,11 @@ class Reader < ApplicationRecord
 
   def record_read(params)
     unless read = Reader.find_by(url: params[:url])
-      Reader.create(params)
+      read = Reader.new(params)
+      return read if read.save
     else
-      read.update(count: count += 1)
+      return read if read.update(counter: read.counter += 1)
     end
+    false
   end
 end
