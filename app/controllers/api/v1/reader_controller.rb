@@ -14,6 +14,11 @@ class Api::V1::ReaderController < ApplicationController
     end
   end
 
+  def index
+    @reads = Reader.top_ten_reads
+    render json: @reads
+  end
+
   private
     def read_params
       params.permit(:title, :url)
